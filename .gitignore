@@ -1,0 +1,15 @@
+medical_appointments.db
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+*.log
+.env
+.venv
+env/
+venv/

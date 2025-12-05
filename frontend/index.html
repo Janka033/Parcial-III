@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Citas Medicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Citas Medicas</h1>
+        
+        <div class="section">
+            <h2>Registrar Paciente</h2>
+            <form id="formPaciente">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="telefono" placeholder="Telefono" required>
+                <button type="submit">Registrar Paciente</button>
+            </form>
+            <div id="mensajePaciente" class="mensaje"></div>
+        </div>
+
+        <div class="section">
+            <h2>Agendar Cita</h2>
+            <form id="formCita">
+                <select id="pacienteId" required>
+                    <option value="">Seleccione un paciente</option>
+                </select>
+                <input type="text" id="doctor" placeholder="Nombre del doctor" required>
+                <input type="date" id="fecha" required>
+                <input type="time" id="hora" required>
+                <button type="submit">Agendar Cita</button>
+            </form>
+            <div id="mensajeCita" class="mensaje"></div>
+        </div>
+
+        <div class="section">
+            <h2>Citas Agendadas</h2>
+            <button id="btnActualizar">Actualizar Lista</button>
+            <div id="listaCitas"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
