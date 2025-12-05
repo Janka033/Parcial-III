@@ -43,7 +43,9 @@ Parcial-III/
 - Vista de citas agendadas
 - Funcionalidad de cancelacion de citas
 
-### Pruebas E2E (Playwright)
+### Pruebas Automatizadas
+- **Pruebas API con pytest** (rapidas): 10 tests que validan endpoints directamente
+- **Pruebas E2E con Playwright** (completas): 11 tests que prueban el frontend
 - Flujo completo de registro y agendamiento
 - Validacion de datos incorrectos
 - Validacion de horarios ocupados
@@ -75,13 +77,20 @@ Abrir el archivo `frontend/index.html` en un navegador web, o usar Live Server.
 
 ```powershell
 cd tests
-npm install
-npx playwright install chromium
+py -m pip install -r requirements.txt
 ```
 
-### 5. Ejecutar pruebas E2E
+### 5. Ejecutar pruebas API (pytest - rapido)
 
 ```powershell
+py -m pytest test_api.py -v
+```
+
+### 6. Ejecutar pruebas E2E (Playwright - opcional)
+
+```powershell
+npm install
+npx playwright install chromium
 npm test
 ```
 
