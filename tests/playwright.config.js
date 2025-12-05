@@ -21,9 +21,9 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: 'cd ../backend && py main.py',
+    command: 'cd ../backend && python main.py',
     url: 'http://localhost:8000',
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
     timeout: 120 * 1000,
   },
 });
